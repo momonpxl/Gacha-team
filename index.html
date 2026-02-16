@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>SpinWheel Gacha · Gcha Team</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffb347">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="app-container">
+    <div class="glass-master">
+        <!-- Header -->
+        <div class="header-row">
+            <h1><i class="#"></i> GACHA Team · MOMONPXL</h1>
+            <div class="stats-badge">
+                <i class="fas fa-save"></i>
+                <span id="autoSaveStatus">Tersimpan</span>
+            </div>
+        </div>
+
+        <!-- Admin Bar -->
+        <div class="admin-bar">
+            <button class="admin-btn" id="adminLockBtn"><i class="fas fa-lock"></i> Lock All</button>
+            <button class="admin-btn" id="adminUnlockBtn"><i class="fas fa-lock-open"></i> Unlock All</button>
+            <div class="stats-badge">
+                <i class="fas fa-chart-bar"></i>
+                <span id="totalSpinsAll">0</span> Total Spin
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tab-bar" id="tabBar">
+            <button class="add-tab-btn" id="addTabBtn"><i class="fas fa-plus"></i> Tambah Tab</button>
+        </div>
+
+        <!-- Panels Container -->
+        <div id="panelsContainer"></div>
+    </div>
+</div>
+
+<!-- Popup -->
+<div class="popup-modal" id="popupModal">
+    <div class="popup-content">
+        <i class="fas fa-trophy" style="font-size:4rem; color:#ffb347;"></i>
+        <div class="popup-name" id="popupNama"></div>
+        <div class="popup-team" id="popupTeam"></div>
+        <button class="popup-close-btn btn-secondary" id="closePopupBtn" style="background:#ffb347; color:#0f1e2c; font-weight:bold; font-size:1.2rem; border:none; padding:16px 40px;">OK</button>
+    </div>
+</div>
+
+<!-- Audio (hidden) -->
+<audio id="spinStartSound" preload="auto">
+    <source src="data:audio/wav;base64,UklGRlwAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YVQAAACAgICAf39/gICAf39/f3+AgIB/f39/f4CAgH9/f3+AgIB/f39/f4CAgH9/f3+AgIB/f39/f4CAgH9/f38=" type="audio/wav">
+</audio>
+<audio id="spinTickSound" preload="auto">
+    <source src="data:audio/wav;base64,UklGRlwAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YVQAAACAgICAf39/gICAf39/f3+AgIB/f39/f4CAgH9/f3+AgIB/f39/f4CAgH9/f3+AgIB/f39/f4CAgH9/f38=" type="audio/wav">
+</audio>
+<audio id="spinResultSound" preload="auto">
+    <source src="data:audio/wav;base64,UklGRlwAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YVQAAACAgICAf39/gICAf39/f3+AgIB/f39/f4CAgH9/f3+AgIB/f39/f4CAgH9/f3+AgIB/f39/f4CAgH9/f38=" type="audio/wav">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
